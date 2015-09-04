@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour {
 	private bool hasMadeSuctionSound=false;
 	private bool hasMadeHitSound=false;
 	private bool moveBallWithKeyboard=true;
+	private AzureUILeaderboard leaderBoard;
 
 
 	SuctionSoundFX suctionSound;
@@ -26,7 +27,7 @@ public class Ball : MonoBehaviour {
 	private Vector4 ballColor;
 	 void Start () {
 	//	rigidbody2d.rigidbody.freezeRotation;
-	
+		leaderBoard = GetComponent<AzureUILeaderboard>();
 	
 		rigidbody2d.velocity=new Vector3 (0,-3 -Time.timeSinceLevelLoad*0.01f ,0);
 		ballColor = GetComponent<SpriteRenderer>().color;
@@ -229,7 +230,9 @@ public class Ball : MonoBehaviour {
 	
 			
 	private void LoseTheGame(){
-		levleManager.LoadLevel("MainMenu");
+	
+		leaderBoard.InsertScore(GameGrid.GetPoints());
+		//levleManager.LoadLevel("MainMenu");
 
 	}
 	void Destruct(){

@@ -58,6 +58,10 @@ public class GameGrid : MonoBehaviour {
 		}
 		
 	}
+	public static int GetPoints(){
+	
+	return points;
+	}
 
 	void CallAnimations (int point, int pointsNumOfSequanceCoefficient)
 	{
