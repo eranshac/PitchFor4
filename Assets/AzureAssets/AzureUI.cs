@@ -87,15 +87,15 @@ public class AzureUI : MonoBehaviour {
 
     private ToDoItem _todo = new ToDoItem()
         {
-            Text = "Here is your Text",
+            Text = "Some Text",
             Complete = false
         };
 
     public List<ToDoItem> _toDoItems = new List<ToDoItem>();
 
-	public string AzureEndPoint = "https://eranmatematika.azure-mobile.net/";
-	public string ApplicationKey = "guHAERzjPvvdZecjtoxpbPhArxoQIz37";
-	public string FacebookAccessToken = "CAAMbyVQMMMQBAOjIDiihmZByrcZAaXqzrYe9tLXkD9HOD4ZAAz6EuZAsQRZAUPQyXKKZCeEsQ432pQRgDL1u8w1S5WGkDWS4e5LHu6DymEYhLdAeP9uGlSC7OQ9lxZCMMSbEUB8SjGyXa28HuPKwBGJOjg4zNbu7fj3v2yiZAWfTnnCvZBTWcnH8Tpa9reWK2hgdZAaUHUxohPezgFuj9ZAYTPw";
+    public string AzureEndPoint = "https://bitraveservices.azure-mobile.net/";
+    public string ApplicationKey = "ePYhutMVmiUPWhFAJaRYTJsPFTiuAB20";
+    public string FacebookAccessToken = "xxx";
     private AzureMobileServices azure;
 
 	// Use this for initialization
