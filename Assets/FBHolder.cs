@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class FBHolder : MonoBehaviour {
@@ -13,7 +14,9 @@ public class FBHolder : MonoBehaviour {
 	}
 	private void SetInit(){
 		print ("FB Init Done");
-		print("FB.UserId   " + FB.UserId);
+
+		
+		
 	if(FB.IsLoggedIn)
 		{
 	
@@ -51,7 +54,8 @@ public class FBHolder : MonoBehaviour {
 			
 			print ("FB Is logged In");
 			print("FB.UserId   " + FB.UserId);
-			
+			Text text =  GameObject.Find("Text").GetComponent<Text>();
+			text.text= "FB.UserId" + FB.UserId;
 			
 		
 		}else{
